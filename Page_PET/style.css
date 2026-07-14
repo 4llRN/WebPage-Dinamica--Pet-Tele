@@ -1,0 +1,236 @@
+/*Estilos Gerais*/
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #e0f7ff, #2b6485, #003366);
+    color: #222;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*Cabeçalho*/
+
+header {
+    background: #003366;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/*Navegação*/
+
+nav {
+    background: #004080;
+    color: #fff;
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+nav a:hover {
+    color: #00caff;
+    text-decoration: underline;
+}
+
+/*Conteúdo Principal*/
+
+main {
+    padding: 30px 0;
+}
+
+/*Informações Gerais*/
+
+.info-geral {
+    margin-bottom: 30px;
+    padding: 25px 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.info-geral h2 {
+    text-align: center;
+    color: #004080;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.info-geral .subinfo {
+    text-align: center;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.info-geral hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.info-geral h3 {
+    color: #004080;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.info-geral ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.info-geral ul li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.info-geral strong {
+    font-weight: 600;
+}
+
+/*Gavetas de Grupos*/
+
+.gaveta {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #f0f8ff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.gaveta:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.gaveta summary {
+    font-weight: 600;
+    padding: 14px 18px;
+    cursor: pointer;
+    background: #e6f2ff;
+    border-bottom: 1px solid #ccc;
+    transition: background 0.3s;
+}
+
+.gaveta summary:hover {
+    background: #d0e7ff;
+}
+
+.gaveta[open] summary {
+    background: #b8dfff;
+}
+
+/*Blocos de Grupo*/
+
+.bloco-grupo {
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.bloco-grupo:hover {
+    transform: translateY(-2px);
+}
+
+.grupo-nome {
+    margin-top: 10px;
+    color: #004080;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+/*Listas de Informações*/
+
+.info-grupo, .info-tutor {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0 10px 0;
+}
+
+.info-grupo li, .info-tutor li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Ícones opcionais (pode ser adicionados com pseudo-elements ou imagens) */
+
+.info-grupo li::before,
+.info-tutor li::before {
+    content: '•';
+    color: #004080;
+    font-weight: bold;
+}
+
+/*Separadores*/
+
+.grupo-separador {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+    opacity: 0.5;
+}
+
+/*Responsividade*/
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .info-geral h2 {
+        font-size: 1.4em;
+    }
+    .grupo-nome {
+        font-size: 1.1em;
+    }
+}
+
