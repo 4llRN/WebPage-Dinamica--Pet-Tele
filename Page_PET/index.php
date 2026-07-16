@@ -48,10 +48,10 @@
     <?php
     // Define as categorias e os ficheiros JSON correspondentes
     $categorias = [
-    "MEC - PET - Grupos de curso único" => "data/grupos_pet_mec_curso_uff_2026_07_16.json",
-    "MEC - PET - Conexão de Saberes" => "data/grupos_pet_mec_conexao_uff_2026_07_16.json",
-    "UFF - ProPET - Grupos de curso único" => "data/grupos_propet_curso_uff_2026_07_16.json",
-    "UFF - ProPET - Conexão de Saberes" => "data/grupos_propet_conexao_uff_2026_07_16.json",
+    "MEC - PET - Grupos de curso único" => "dados/grupos_pet_mec_curso_uff_2026_07_16.json",
+    "MEC - PET - Conexão de Saberes" => "dados/grupos_pet_mec_conexao_uff_2026_07_16.json",
+    "UFF - ProPET - Grupos de curso único" => "dados/grupos_propet_curso_uff_2026_07_16.json",
+    "UFF - ProPET - Conexão de Saberes" => "dados/grupos_propet_conexao_uff_2026_07_16.json",
 ];
 
     // Percorre todas as categorias
