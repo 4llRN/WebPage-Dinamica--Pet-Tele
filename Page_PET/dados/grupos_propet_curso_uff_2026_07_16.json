@@ -1,0 +1,188 @@
+{
+ "grupos_propet_ies_curso_uff": [
+  {
+    "grupo": {
+                "nome": "ProPET-Ciências Biológicas / Biologia",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["08", "2013"],
+                "website": "https://linktr.ee/propetbiouff",
+                "instagram": "https://www.instagram.com/petbiologiauff",
+                "facebook": "https://www.facebook.com/petbiofronteiras",
+                "youtube": "https://www.youtube.com/@propetsustentabilidadeemme3162",
+                "outros": "",
+                "email": "petbiofronteira@gmail.com",
+                "campus": "Niterói",
+                "local": "Rua Professor Marcos Waldemar de Freitas Reis, s/n / Laboratório 313 / Bloco M - Campus do Gragoatá - São Domingos - Niterói"
+            },
+    "tutor": {
+                "nome": "Prof. Luiz Mors Cabral",
+                "lattes": "http://lattes.cnpq.br/5525595141868422",
+                "webpage": "",
+                "email": "luizmors@id.uff.br",
+                "local": ""
+            }
+    },
+    {
+    "grupo": {
+                "nome": "ProPET-Ciências Econômicas / Economia",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["", ""],
+                "website": "https://campsite.bio/peteconomiauffcampos",
+                "instagram": "https://www.instagram.com/peteconomia_uffcampos",
+                "facebook": "https://www.facebook.com/peteconomiauffcampos",
+                "youtube": "",
+                "outros": "",
+                "email": "propeteconomia@gmail.com",
+                "campus": "Campos dos Goytacazes",
+                "local": "Rua José do Patrocínio, 71 - Polo Universitário de Campos dos Goytacazes - Centro - Campos dos Goytacazes."
+            },
+    "tutor": {
+                "nome": "Profª Vanuza da Silva Pereira Ney",
+                "lattes": "http://lattes.cnpq.br/7004785235103898",
+                "webpage": "",
+                "email": "vanuzasilva@id.uff.br",
+                "local": ""
+            }
+    },
+    {
+    "grupo": {
+                "nome": "ProPET-Engenharia Elétrica",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["", "2011"],
+                "website": "http://www.peteletrica.uff.br/",
+                "instagram": "https://www.instagram.com/peteletricauff",
+                "facebook": "https://www.facebook.com/peteletricauff",
+                "youtube": "",
+                "outros": "",
+                "email": "peteletricauff@gmail.com",
+                "campus": "Niterói",
+                "local": "Rua Passo da Pátria, 156 / Bloco E / Sala 422-B - Campus da Praia Vermelha - São Domingos - Niterói."
+            },
+    "tutor": {
+                "nome": "Prof. Felipe Sass",
+                "lattes": "http://lattes.cnpq.br/0239336614467756",
+                "webpage": "",
+                "email": "felipesass@id.uff.br",
+                "local": "Rua Passo da Pátria, 156 / Bloco D / Sala 403 - Campus da Praia Vermelha - São Domingos - Niterói."
+            }
+    },
+    {
+    "grupo": {
+                "nome": "ProPET-Engenharia de Petróleo",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["", "2013"],
+                "website": "http://petropet.uff.br/",
+                "instagram": "https://www.instagram.com/petropetuff",
+                "facebook": "https://www.facebook.com/petropetuff",
+                "youtube": "",
+                "outros": "",
+                "email": "petropetuff@gmail.com",
+                "campus": "Niterói",
+                "local": "Rua Passo da Pátria, 156 / Bloco D / Sala 264 - Campus da Praia Vermelha - São Domingos - Niterói"
+            },
+    "tutor": {
+                "nome": "Prof. Troner Assenheimer de Souza",
+                "lattes": "http://lattes.cnpq.br/0138391880961720",
+                "webpage": "",
+                "email": "troneras@id.uff.br",
+                "local": ""
+            }
+    },
+    {
+    "grupo": {
+                "nome": "ProPET-Engenharia de Produção",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["", ""],
+                "website": "https://linktr.ee/petproducaouff",
+                "instagram": "https://www.instagram.com/petproducaouff",
+                "facebook": "https://www.facebook.com/propetproducao",
+                "youtube": "",
+                "outros": "",
+                "email": "petproducaouff@gmail.com",
+                "campus": "Niterói",
+                "local": "Rua Passo da Pátria, 156 / Bloco E / Sala 441 - Campus da Praia Vermelha - São Domingos - Niterói."
+            },
+    "tutor": {
+                "nome": "Prof. José Rodrigues de Farias Filho",
+                "lattes": "http://lattes.cnpq.br/9211890399850624",
+                "webpage": "",
+                "email": "joserodrigues@id.uff.br",
+                "local": ""
+            }
+    },
+    {
+    "grupo": {
+                "nome": "ProPET-Engenharia Química",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["12", "2011"],
+                "website": "https://petequff.wordpress.com/",
+                "instagram": "https://www.instagram.com/engquipet",
+                "facebook": "https://www.facebook.com/engquipet",
+                "youtube": "",
+                "outros": "",
+                "email": "engquipet@gmail.com",
+                "campus": "Niterói",
+                "local": "Rua Passo da Pátria, 156 / Bloco D - Campus da Praia Vermelha - São Domingos - Niterói."
+            },
+    "tutor": {
+                "nome": "Prof. João Felipe Mitre de Araújo",
+                "lattes": "http://lattes.cnpq.br/6770940353518231",
+                "webpage": "",
+                "email": "jf_mitre@id.uff.br",
+                "local": ""
+            }
+    },
+    {
+    "grupo": {
+                "nome": "ProPET-Fonoaudiologia",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["", "2013"],
+                "website": "https://sites.google.com/view/propetfono/home?authuser=0",
+                "instagram": "https://www.instagram.com/pro_pet_fono",
+                "facebook": "https://www.facebook.com/pet.fono.5",
+                "youtube": "",
+                "outros": "",
+                "email": "petfono1@gmail.com",
+                "campus": "Nova Friburgo",
+                "local": "Rua Dr. Sílvio Henrique Braune, 22 - Polo Universitário de Nova Friburgo - Centro - Nova Friburgo."
+            },
+    "tutor": {
+                "nome": "Profª Beatriz Paiva Bueno de Almeida",
+                "lattes": "http://lattes.cnpq.br/4492401147844680",
+                "webpage": "",
+                "email": "balmeida@id.uff.br",
+                "local": ""
+            }
+    },
+    {
+    "grupo": {
+                "nome": "ProPET-Medicina Veterinária",
+                "origem": "IES",
+                "tipo": "CURSO",
+                "criacao": ["", ""],
+                "website": "http://sociovet.sites.uff.br/",
+                "instagram": "https://www.instagram.com/propetvetuff",
+                "facebook": "https://www.facebook.com/sociovet",
+                "youtube": "",
+                "outros": "",
+                "email": "petvetuff@gmail.com",
+                "campus": "Niterói",
+                "local": "Avenida Alm. Ary Parreiras, 503 - Faculdade de Veterinária - Icaraı́ - Niterói"
+            },
+    "tutor": {
+                "nome": "Profª Luiza Carneiro Mareti Valente",
+                "lattes": "http://lattes.cnpq.br/0932128406027503",
+                "webpage": "",
+                "email": "lmareti@id.uff.br",
+                "local": "Sala do MZO - Térreo - Faculdade de Veterinária - Niterói."
+            }
+    }
+  ]
+}

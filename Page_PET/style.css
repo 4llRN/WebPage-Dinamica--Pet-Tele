@@ -217,7 +217,7 @@ main {
         width: 95%;
     }
     nav ul li {
-        display: block;
+        display: block; 
         margin: 10px 0;
     }
 }

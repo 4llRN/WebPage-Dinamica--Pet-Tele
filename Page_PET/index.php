@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante boa exibição em dispositivos móveis -->
-    <title>Grupos PET da UFF</title> <!-- Título da página -->
-    <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo CSS -->
-</head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Grupos PET da UFF</title> <link rel="stylesheet" href="style.css"> </head>
 <body>
 
-    <!-- Cabeçalho da página -->
     <header>
         <div class="container">
             <h1>Grupos PET da UFF</h1>
         </div>
     </header>
 
-    <!-- Menu de navegação -->
     <nav>
         <div class="container">
             <ul>
@@ -31,10 +25,8 @@
         </div>
     </nav>
 
-    <!-- Conteúdo principal -->
     <main class="container">
     
-    <!-- Seção com informações gerais -->
     <section class="info-geral">
         <h2>Contatos: Grupos PET da UFF</h2>
         <p class="subinfo">
@@ -54,13 +46,13 @@
     </section>
     
     <?php
-    // Define as categorias e os arquivos JSON correspondentes
+    // Define as categorias e os ficheiros JSON correspondentes
     $categorias = [
-        "MEC - PET - Grupos de curso único" => "dados/Pet_CursoU.json",
-        "MEC - PET - Conexão de Saberes" => "dados/Pet_Conex.json",
-        "UFF - ProPET - Grupos de curso único" => "dados/ProPet_CursoU.json",
-        "UFF - ProPET - Conexão de Saberes" => "dados/ProPet_Conex.json",
-    ];
+    "MEC - PET - Grupos de curso único" => "data/grupos_pet_mec_curso_uff_2026_07_16.json",
+    "MEC - PET - Conexão de Saberes" => "data/grupos_pet_mec_conexao_uff_2026_07_16.json",
+    "UFF - ProPET - Grupos de curso único" => "data/grupos_propet_curso_uff_2026_07_16.json",
+    "UFF - ProPET - Conexão de Saberes" => "data/grupos_propet_conexao_uff_2026_07_16.json",
+];
 
     // Percorre todas as categorias
     foreach ($categorias as $titulo => $arquivo) {
@@ -71,95 +63,115 @@
         // Verifica se o arquivo existe
         if (file_exists($arquivo)) {
             $jsonData = file_get_contents($arquivo); // Lê o conteúdo do arquivo
-            $grupos = json_decode($jsonData, true);  // Converte o JSON para array PHP
+            $dados_arquivo = json_decode($jsonData, true);  // Converte o JSON para array PHP
 
             // Verifica se o JSON foi lido corretamente e não está vazio
-            if (is_array($grupos) && !empty($grupos)) {
+            if (is_array($dados_arquivo) && !empty($dados_arquivo)) {
 
-                // Percorre cada grupo dentro da categoria
-                foreach ($grupos as $grupo) {
+                // Como cada arquivo JSON possui uma chave raiz diferente, pegamos o primeiro elemento do array (a lista de grupos)
+                $lista_grupos = reset($dados_arquivo);
 
-                    echo "<div class='bloco-grupo'>"; // Bloco de informações de um grupo
+                if (is_array($lista_grupos)) {
+
+                    // Percorre cada registro dentro da lista
+                    foreach ($lista_grupos as $registro) {
                         
-                    // Exibe o nome do grupo ou "Grupo sem nome" se não existir
-                    $nome = !empty($grupo['nome']) ? htmlspecialchars($grupo['nome']) : "Grupo sem nome";
-                    echo "<h3 class='grupo-nome'>$nome</h3>";
+                        $g = $registro['grupo'] ?? [];
+                        $t = $registro['tutor'] ?? [];
 
-                    // Lista de informações gerais do grupo
-                    echo "<ul class='info-grupo'>";
-                    
-                    //Data de criação do grupo
-                    if (!empty($grupo['criacao'])) {
-                        echo "<li><strong>Criado em:</strong> " . htmlspecialchars($grupo['criacao']) . "</li>";
-                    }
+                        echo "<div class='bloco-grupo'>"; // Bloco de informações de um grupo
+                        
+                        // Exibe o nome do grupo ou "Grupo sem nome" se não existir
+                        $nome = !empty($g['nome']) ? htmlspecialchars($g['nome']) : "Grupo sem nome";
+                        echo "<h3 class='grupo-nome'>$nome</h3>";
 
+                        // Lista de informações gerais do grupo
+                        echo "<ul class='info-grupo'>";
+                        
+                        // Data de criação do grupo no formato [mês, ano]
+                        if (!empty($g['criacao']) && is_array($g['criacao'])) {
+                            $mes = !empty($g['criacao'][0]) ? htmlspecialchars($g['criacao'][0]) . "/" : "";
+                            $ano = !empty($g['criacao'][1]) ? htmlspecialchars($g['criacao'][1]) : "";
+                            if ($ano !== "") {
+                                echo "<li><strong>Criado em:</strong> " . $mes . $ano . "</li>";
+                            }
+                        }
 
-                    // Website do grupo
-                    if (!empty($grupo['website'])) {
-                        $url = (strpos($grupo['website'], 'http') === 0) ? $grupo['website'] : 'https://' . $grupo['website'];
-                        echo "<li><strong>Website:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar site</a></li>";
-                    }
+                        // Campus do grupo
+                        if (!empty($g['campus'])) {
+                            echo "<li><strong>Campus:</strong> " . htmlspecialchars($g['campus']) . "</li>";
+                        }
 
-                    // Instagram
-                    if (!empty($grupo['instagram'])) {
-                        $handle = ltrim($grupo['instagram'], '@');
-                        $url = "https://instagram.com/" . htmlspecialchars($handle);
-                        echo "<li><strong>Instagram:</strong> <a href='$url' target='_blank'>@" . htmlspecialchars($handle) . "</a></li>";
-                    }
+                        // Website do grupo
+                        if (!empty($g['website'])) {
+                            $url = (strpos($g['website'], 'http') === 0) ? $g['website'] : 'https://' . $g['website'];
+                            echo "<li><strong>Website:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar site</a></li>";
+                        }
 
-                    // Facebook
-                    if (!empty($grupo['facebook'])) {
-                        echo "<li><strong>Facebook:</strong> <a href='" . htmlspecialchars($grupo['facebook']) . "' target='_blank'>Acessar</a></li>";
-                    }
+                        // Instagram (Trata a URL completa e extrai o handle para exibir "@nome_do_perfil")
+                        if (!empty($g['instagram'])) {
+                            $url = (strpos($g['instagram'], 'http') === 0) ? $g['instagram'] : 'https://instagram.com/' . ltrim($g['instagram'], '@');
+                            $path = parse_url($url, PHP_URL_PATH);
+                            $handle = $path ? trim($path, '/') : 'Instagram';
+                            echo "<li><strong>Instagram:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>@" . htmlspecialchars($handle) . "</a></li>";
+                        }
 
-                    // YouTube
-                    if (!empty($grupo['youtube'])) {
-                        $url = (strpos($grupo['youtube'], 'http') === 0) ? $grupo['youtube'] : 'https://' . $grupo['youtube'];
-                        echo "<li><strong>YouTube:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar canal</a></li>";
-                    }
+                        // Facebook
+                        if (!empty($g['facebook'])) {
+                            echo "<li><strong>Facebook:</strong> <a href='" . htmlspecialchars($g['facebook']) . "' target='_blank'>Acessar</a></li>";
+                        }
 
-                    // Outros
-                    if (!empty($grupo['outros'])) {
-                        $url = (strpos($grupo['outros'], 'http') === 0) ? $grupo['outros'] : 'https://' . $grupo['outros'];
-                        echo "<li><strong>Outros:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar</a></li>";
-                    }
+                        // YouTube
+                        if (!empty($g['youtube'])) {
+                            $url = (strpos($g['youtube'], 'http') === 0) ? $g['youtube'] : 'https://' . $g['youtube'];
+                            echo "<li><strong>YouTube:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar canal</a></li>";
+                        }
 
-                    // Email
-                    if (!empty($grupo['email'])) {
-                        echo "<li><strong>Email:</strong> <a href='mailto:" . htmlspecialchars($grupo['email']) . "'>" . htmlspecialchars($grupo['email']) . "</a></li>";
-                    }
+                        // Outros links
+                        if (!empty($g['outros'])) {
+                            $url = (strpos($g['outros'], 'http') === 0) ? $g['outros'] : 'https://' . $g['outros'];
+                            echo "<li><strong>Outros:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar</a></li>";
+                        }
 
-                    // Localização
-                    if (!empty($grupo['localizacao'])) {
-                        echo "<li><strong>Localização:</strong> " . htmlspecialchars($grupo['localizacao']) . "</li>";
-                    }
+                        // Email do grupo
+                        if (!empty($g['email'])) {
+                            echo "<li><strong>Email:</strong> <a href='mailto:" . htmlspecialchars($g['email']) . "'>" . htmlspecialchars($g['email']) . "</a></li>";
+                        }
 
-                    echo "</ul>";
+                        // Localização do grupo (Rua/Sala)
+                        if (!empty($g['local'])) {
+                            echo "<li><strong>Localização:</strong> " . htmlspecialchars($g['local']) . "</li>";
+                        }
 
-                    // Informações do tutor
-                    echo "<h4>Informações do Tutor</h4>";
-                    echo "<ul class='info-tutor'>";
+                        echo "</ul>";
 
-                    if (!empty($grupo['tutor'])) {
-                        echo "<li><strong>Tutor:</strong> " . htmlspecialchars($grupo['tutor']) . "</li>";
-                    }
-                    if (!empty($grupo['lattes'])) {
-                        $url = (strpos($grupo['website'], 'http') === 0) ? $grupo['lattes'] : 'https://' . $grupo['lattes'];
-                        echo "<li><strong>Lattes:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar site</a></li>";
-                    }
-                    if (!empty($grupo['webpage_tutor'])) {
-                        echo "<li><strong>Webpage:</strong> " . htmlspecialchars($grupo['webpage_tutor']) . "</li>";
-                    }
-                    if (!empty($grupo['emaiL_tutor'])) {
-                        echo "<li><strong>Email:</strong> <a href='mailto:" . htmlspecialchars($grupo['emaiL_tutor']) . "'>" . htmlspecialchars($grupo['emaiL_tutor']) . "</a></li>";
-                    }
-                    if (!empty($grupo['localizacao_tutor'])) {
-                        echo "<li><strong>Localização:</strong> " . htmlspecialchars($grupo['localizacao_tutor']) . "</li>";
-                    }
+                        if (!empty($t['nome'])) {
+                            echo "<h4>Informações do Tutor</h4>";
+                            echo "<ul class='info-tutor'>";
 
-                    echo "</ul>";
-                    echo "</div>"; // Fim de um grupo
-                    echo "<hr class='grupo-separador'>"; 
+                            echo "<li><strong>Tutor:</strong> " . htmlspecialchars($t['nome']) . "</li>";
+
+                            if (!empty($t['lattes'])) {
+                                $url = (strpos($t['lattes'], 'http') === 0) ? $t['lattes'] : 'https://' . $t['lattes'];
+                                echo "<li><strong>Lattes:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar currículo</a></li>";
+                            }
+                            if (!empty($t['webpage'])) {
+                                $url = (strpos($t['webpage'], 'http') === 0) ? $t['webpage'] : 'https://' . $t['webpage'];
+                                echo "<li><strong>Webpage:</strong> <a href='" . htmlspecialchars($url) . "' target='_blank'>Acessar site</a></li>";
+                            }
+                            if (!empty($t['email'])) {
+                                echo "<li><strong>Email:</strong> <a href='mailto:" . htmlspecialchars($t['email']) . "'>" . htmlspecialchars($t['email']) . "</a></li>";
+                            }
+                            if (!empty($t['local'])) {
+                                echo "<li><strong>Localização:</strong> " . htmlspecialchars($t['local']) . "</li>";
+                            }
+
+                            echo "</ul>";
+                        }
+
+                        echo "</div>"; 
+                        echo "<hr class='grupo-separador'>"; 
+                    }
                 }
             }
         }
