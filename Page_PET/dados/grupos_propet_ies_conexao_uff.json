@@ -1,0 +1,27 @@
+{
+ "grupos_propet_ies_conexao_uff": [
+  {
+    "grupo": {
+                "nome": "ProPET-Ciranda Rural (Interdisciplinar)",
+                "origem": "IES",
+                "tipo": "CONEXAO",
+                "criacao": ["08", "2013"],
+                "website": "https://linktr.ee/petcirandaruralu.ffcampos",
+                "instagram": "https://www.instagram.com/petcirandarural",
+                "facebook": "https://www.facebook.com/PetCirandaRural",
+                "youtube": "",
+                "outros": "",
+                "email": "",
+                "campus": "Campos dos Goytacazes",
+                "local": "Rua José do Patrocínio, 71, Polo Universitário de Campos dos Goytacazes, Centro, Campos dos Goytacazes."
+            },
+    "tutor": {
+                "nome": "Profª Maria do Socorro B. de Lima",
+                "lattes": "",
+                "webpage": "",
+                "email": "msblima@id.uff.br",
+                "local": ""
+            }
+    }
+  ]
+}

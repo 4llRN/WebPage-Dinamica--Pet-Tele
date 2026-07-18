@@ -1,0 +1,96 @@
+{
+ "grupos_pet_mec_conexao_uff": [
+  {
+   "grupo": {
+             "nome"     : "PET-Enfermagem",
+             "origem"   : "MEC",
+             "tipo"     : "CONEXAO",
+             "criacao"  : ["","2010"],
+             "website"  : "https://lnk.bio/asyd",
+             "instagram": "https://www.instagram.com/pet_enf",
+             "facebook" : "https://www.facebook.com/petenfermagemro",
+             "youtube"  : "https://www.youtube.com/@petenfermagempuro901",
+             "outros"   : "",
+             "email"    : "petuffenfermagem@gmail.com",
+             "campus"   : "Rio das Ostras",
+             "local"    : "Rua Recife, s/n - Polo Universitário de Rio das Ostras - Jardim Bela Vista - Rio das Ostras."
+            },
+   "tutor" : {
+              "nome"   : "Profª Marcela de Abreu Moniz",
+              "lattes" : "http://lattes.cnpq.br/6337291798996641",
+              "webpage": "",
+              "email"  : "marcelamoniz@id.uff.br",
+              "local"  : ""
+             }
+  },
+  {
+   "grupo": {
+             "nome"     : "PET-Farmácia Viva",
+             "origem"   : "MEC",
+             "tipo"     : "CONEXAO",
+             "criacao"  : ["","2011"],
+             "website"  : "http://petfarmaciaviva.wordpress.com/",
+             "instagram": "https://www.instagram.com/petfarmaciaviva",
+             "facebook" : "https://www.facebook.com/petfarmaciaviva",
+             "youtube"  : "",
+             "outros"   : "",
+             "email"    : "petfarmaciaviva@gmail.com",
+             "campus"   : "Niterói",
+             "local"    : "Rua Dr. Mario Vianna, 523 - Santa Rosa - Niterói."
+            },
+   "tutor" : {
+              "nome"   : "Profª Thelma de Barros Machado",
+              "lattes" : "http://lattes.cnpq.br/0278676646547071",
+              "webpage": "",
+              "email"  : "thelma_machado@id.uff.br",
+              "local"  : "Laboratório de Controle de Qualidade Físico-Químico de Medicamentos e Fitomedicamentos - Faculdade de Farmácia - Niterói."
+             }
+  },
+  {
+   "grupo": {
+             "nome"     : "PET-História",
+             "origem"   : "MEC",
+             "tipo"     : "CONEXAO",
+             "criacao"  : ["","2010"],
+             "website"  : "https://pethistoriauff.carrd.co/",
+             "instagram": "https://www.instagram.com/pethistoriauff",
+             "facebook" : "",
+             "youtube"  : "",
+             "outros"   : "",
+             "email"    : "pet.historia.uff@gmail.com",
+             "campus"   : "Niterói",
+             "local"    : "Rua Professor Marcos Waldemar de Freitas Reis, s/n / Bloco O / Sala 409 - Campus do Gragoatá - São Domingos - Niterói."
+            },
+   "tutor" : {
+              "nome"   : "Profª Renata Vereza",
+              "lattes" : "http://lattes.cnpq.br/1642988193944431",
+              "webpage": "",
+              "email"  : "renata.vereza@gmail.com",
+              "local"  : ""
+             }
+  },
+  {
+   "grupo": {
+             "nome"     : "PET-Interdisciplinar (cursos de licenciatura)",
+             "origem"   : "MEC",
+             "tipo"     : "CONEXAO",
+             "criacao"  : ["","2015"],
+             "website"  : "https://cafecompet.wordpress.com/",
+             "instagram": "https://www.instagram.com/petinter.uff",
+             "facebook" : "https://www.facebook.com/cafecompet",
+             "youtube"  : "",
+             "outros"   : "",
+             "email"    : "petinter.ese@id.uff.br",
+             "campus"   : "Niterói",
+             "local"    : "Rua Professor Marcos Waldemar de Freitas Reis, s/n / Bloco D - Campus do Gragoatá - São Domingos - Niterói."
+            },
+   "tutor" : {
+              "nome"   : "Profª Mônica Vasconcellos",
+              "lattes" : "http://lattes.cnpq.br/3715055413703709",
+              "webpage": "",
+              "email"  : "monicavasconcellos@id.uff.br",
+              "local"  : ""
+             }
+  }
+ ]
+}
